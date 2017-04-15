@@ -2,7 +2,7 @@ package cn.illegal.bean;
 
 import java.io.Serializable;
 
-public class messageBean implements Serializable {
+public class MessageBean implements Serializable {
 
 	/**
 	 * 

@@ -8,151 +8,49 @@ import cn.illegal.bean.Token;
 import cn.illegal.bean.UserOpenidBean;
 import cn.illegal.bean.UserRegInfo;
 import cn.illegal.bean.WechatUserInfoBean;
+import cn.illegal.bean.AppealInfoBack;
+import cn.illegal.bean.AppealInfoBean;
+import cn.illegal.bean.CarInfoBean;
+import cn.illegal.bean.CustInfoBean;
+import cn.illegal.bean.IllegalInfoBean;
+import cn.illegal.bean.IllegalInfoSheet;
+import cn.illegal.bean.IllegalProcessPointBean;
+import cn.illegal.bean.ReservationDay;
+import cn.illegal.bean.SubcribeBean;
 
 /**
- * @author suntao
+ * @author lutaijun
  */
 public interface IIllegalService {
 	
 	
-	/**
-	 * 插入微信用户信息
-	 * @param wechatUserInfo
-	 * @return 成功则返回纪录id，失败返回0
-	 */
-	int insertWechatUserInfo(WechatUserInfoBean wechatUserInfo);
-    
-	/**
-	 * 通过id获取用户微信信息
-	 * @param id
-	 * @return
-	 */
-	WechatUserInfoBean getWechatUserInfoById(int id);
+	public String getMsg(String msg);
 	
-	/**
-	 * 获取全部对象List
-	 * @return
-	 */
-	List<WechatUserInfoBean> getAllWechatUserInfoBeanList();
-
-
-
-//	/**
-//	 * 添加新用户
-//	 * 
-//	 * @param UserRegInfo userRegInfo
-//	 * @return
-//	 */
-//	public UserRegInfo addNewUser(UserRegInfo userRegInfo);
-//	
-//	
-//	/**
-//     * 根据userId来获取accessToken
-//     * 
-//     * @param userId
-//     * @return
-//     */
-//    public String getAccessTokenByUserId(long userId);
-//
-//    /**
-//     * 获取缓存的加密accessToken和accessToken的对应关系
-//     * 
-//     * @param encyptAccessToken
-//     * @return
-//     */
-//    public String getAccessTokenFromEncypt(String encyptAccessToken);
-//
-//    /**
-//     * 插入加密accessToken和accessToken的对应关系
-//     * 
-//     * @param encyptAccessToken
-//     * @param AccessToken
-//     */
-//    public void insertEncyptAccessToken(String encyptAccessToken, String AccessToken);
-//    
-//    /**
-//     * 获取并插入Token
-//     * @param userId
-//     * @return
-//     */
-//    public Token getAccessToken(long userId);
-//    
-//    
-//    /**
-//     * 检查accessToken是否过期
-//     * 
-//     * @param accessToken
-//     * @param userId
-//     * @return 是否成功
-//     */
-//    public boolean isAccessTokenValidate(String accessToken, String userId);
-//    
-//    /**
-//     * 根据refreshToken来获取accessToken
-//     * 
-//     * @param refreshToken
-//     * @return 是否成功
-//     */
-//    public Map<String, String> getAccessTokenByRefreshToken(String userId, String refreshToken);
-//    
-//    /**
-//     * 绑定微信
-//     * 
-//     * @param userOpenidBean
-//     * @author shengfenglai
-//     * @return long
-//     */
-//    public long  addBindOpenid(UserOpenidBean userOpenidBean);
-//    
-//    /**
-//     * 取消绑定微信
-//     * 
-//     * @param userOpenidBean
-//     * @author shengfenglai
-//     * @return long 
-//     */
-//    public long cancelBindOpenid(UserOpenidBean userOpenidBean);
-//    
-//    /**
-//     * 通过openid拿到userId
-//     * @param openid
-//     * @return userId
-//     * @author shengfenglai
-//     */
-//    public long getUserIdByOpenid(String openid);
-//    
-//    /**
-//     * 通过userId拿到openid
-//     * @param userId 
-//     * @return 
-//     * @author shengfenglai
-//     */
-//    public String getOpenidByUserId(long userId);
-//    
-//    /**
-//     * 获取DeviceBean
-//     * @param deviceUuid 设备号
-//     * @param osType 系统类型
-//     * @return
-//     */
-//    public DeviceBean getDevice(String deviceUuid,int osType);
-//    
-//    /**
-//     * 记录设备号
-//     * @param deviceUuid 设备号
-//     * @param osType 系统类型
-//     * @param userId 用户id
-//     */
-//    public void addDevice(String deviceUuid,int osType,long userId);
-//    
-//    /**
-//     * 更新cm_devices表的user_id
-//     * @param deviceUuid 设备号
-//     * @param osType 系统类型
-//     * @param userId 用户id
-//     * @return
-//     */
-//    public boolean updateDevice(String deviceUuid,int osType,long userId);
-//    
-    
+	public String custRegInfoReceive(CustInfoBean custInfo ,List<CarInfoBean> carInfo);
+	
+	public List<IllegalInfoBean> queryInfoByLicensePlateNo(String licensePlateNo,String licensePlateType,String vehicleIdentifyNoLast4);
+	
+	public List<IllegalInfoBean> queryInfoByDrivingLicenceNo(String drivingLicenceNo,String recordNo);
+	
+	public List<IllegalInfoBean> trafficIllegalClaimBefore(String licensePlateNo, String licensePlateType, String mobilephone);
+	
+	public IllegalInfoSheet trafficIllegalClaim(String illegalNo);
+	
+	public List<IllegalInfoSheet> toQueryPunishmentPage(String billNo,String  licensePlateNo,String mobilephone);
+	
+	public String toPayPage(String illegalNo);
+	
+	public List<IllegalProcessPointBean> getIllegalProcessingPoint();
+	
+	public String toChangeSubscribe(String snm,String cldbmid,String cczb_id,CustInfoBean custInfo,CarInfoBean carInfo,String sourceType);
+	
+	public String toCancleSubscribe(String subscribeNo);
+	
+	public List<SubcribeBean> querySubscribe(String licensePlateNo,String  licensePlateType,String mobilephone);
+	
+	public  List<ReservationDay> toGetSubscribeSorts(String cldbmid);
+	
+	public String trafficIllegalAppeal(AppealInfoBean info,String identityCard,String userCode,String sourceType);
+	
+	public AppealInfoBack trafficIllegalAppealFeedback(String identityCard,String sourceType);
 }

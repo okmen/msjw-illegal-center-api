@@ -2,7 +2,7 @@ package cn.illegal.bean;
 
 import java.io.Serializable;
 
-public class illegalInfoSheet  implements Serializable{
+public class IllegalInfoSheet  implements Serializable{
 
 	/**
 	 * 

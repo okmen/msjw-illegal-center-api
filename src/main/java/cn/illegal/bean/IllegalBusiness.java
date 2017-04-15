@@ -3,7 +3,7 @@ package cn.illegal.bean;
 import java.io.Serializable;
 import java.util.List;
 
-public class illegalBusiness implements Serializable{
+public class IllegalBusiness implements Serializable{
 	
 	/**
 	 * 

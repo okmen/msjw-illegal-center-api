@@ -2,7 +2,7 @@ package cn.illegal.bean;
 
 import java.io.Serializable;
 
-public class appealInfoBean implements Serializable {
+public class AppealInfoBean implements Serializable {
 
 	/**
 	 * 
@@ -11,17 +11,45 @@ public class appealInfoBean implements Serializable {
 	
 	private String billNo;
 	private String licensePlateNo;
+	private String licensePlateType;
 	private String illegalTime;
 	private String illegalAddress;
 	private String illegalDesc;
-	private Integer punishAmount;
-	private Integer punishScore;
 	private String agency;
 	private String claimant;
 	private String claimantAddress;
 	private String claimantPhone;
 	private String appealType;
 	private String appealContent;
+	private String materialPicture;
+	
+	public AppealInfoBean(){
+		
+	}
+	
+		
+	public AppealInfoBean(String billNo, String licensePlateNo, String licensePlateType,String illegalTime, String illegalAddress,
+			String illegalDesc, String agency, String claimant,
+			String claimantAddress, String claimantPhone, String appealType, String appealContent,
+			String materialPicture) {
+		super();
+		this.billNo = billNo;
+		this.licensePlateNo = licensePlateNo;
+		this.licensePlateType = licensePlateType;
+		this.illegalTime = illegalTime;
+		this.illegalAddress = illegalAddress;
+		this.illegalDesc = illegalDesc;
+		this.agency = agency;
+		this.claimant = claimant;
+		this.claimantAddress = claimantAddress;
+		this.claimantPhone = claimantPhone;
+		this.appealType = appealType;
+		this.appealContent = appealContent;
+		this.materialPicture = materialPicture;
+	}
+
+
+
 	public String getBillNo() {
 		return billNo;
 	}
@@ -52,18 +80,7 @@ public class appealInfoBean implements Serializable {
 	public void setIllegalDesc(String illegalDesc) {
 		this.illegalDesc = illegalDesc;
 	}
-	public Integer getPunishAmount() {
-		return punishAmount;
-	}
-	public void setPunishAmount(Integer punishAmount) {
-		this.punishAmount = punishAmount;
-	}
-	public Integer getPunishScore() {
-		return punishScore;
-	}
-	public void setPunishScore(Integer punishScore) {
-		this.punishScore = punishScore;
-	}
+
 	public String getAgency() {
 		return agency;
 	}
@@ -99,6 +116,22 @@ public class appealInfoBean implements Serializable {
 	}
 	public void setAppealContent(String appealContent) {
 		this.appealContent = appealContent;
+	}
+	public String getMaterialPicture() {
+		return materialPicture;
+	}
+	public void setMaterialPicture(String materialPicture) {
+		this.materialPicture = materialPicture;
+	}
+
+
+	public String getLicensePlateType() {
+		return licensePlateType;
+	}
+
+
+	public void setLicensePlateType(String licensePlateType) {
+		this.licensePlateType = licensePlateType;
 	}
 
 	
