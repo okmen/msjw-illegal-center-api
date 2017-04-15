@@ -1,6 +1,13 @@
 package cn.illegal.bean;
 
-public class SubcribeBean {
+import java.io.Serializable;
+
+public class SubcribeBean implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1838973140591313968L;
+
 	private String cldbmmc;
 
 	private String hphm;

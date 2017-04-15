@@ -1,8 +1,13 @@
 package cn.illegal.bean;
 
+import java.io.Serializable;
 
+public class ReservationDay  implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3397203762097686564L;
 
-public class ReservationDay {
 	private String yydate;
 
 	private Yydate_sjd yydate_sjd;

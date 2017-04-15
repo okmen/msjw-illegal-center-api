@@ -1,6 +1,13 @@
 package cn.illegal.bean;
 
-public class ParamRequestBean {
+import java.io.Serializable;
+
+public class ParamRequestBean implements Serializable  {
+		/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2272309121507003442L;
+
 		private String partnerCode;
 
 		private String partnerUserId;

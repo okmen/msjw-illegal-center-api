@@ -1,8 +1,14 @@
 package cn.illegal.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class CustDataInfo {
+public class CustDataInfo implements Serializable  {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2434623391451990731L;
+
 	private CustInfoBean custInfo;
 
 	private List<CarInfoBean> carInfo ;

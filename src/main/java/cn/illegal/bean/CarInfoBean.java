@@ -1,6 +1,13 @@
 package cn.illegal.bean;
 
-public class CarInfoBean {
+import java.io.Serializable;
+
+public class CarInfoBean implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3615505941884637578L;
+
 	private String licensePlateNo;
 
 	private String licensePlateType;

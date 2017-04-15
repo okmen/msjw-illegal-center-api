@@ -1,6 +1,13 @@
 package cn.illegal.bean;
 
-public class AppealInfoBack {
+import java.io.Serializable;
+
+public class AppealInfoBack implements Serializable  {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6008227765286012845L;
+
 	private String ID;
 
 	private String JKBH;

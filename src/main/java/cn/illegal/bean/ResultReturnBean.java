@@ -1,6 +1,13 @@
 package cn.illegal.bean;
 
-public class ResultReturnBean {
+import java.io.Serializable;
+
+public class ResultReturnBean implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8560037247058076393L;
+
 	private String partnerCode;
 
 	private String partnerUserId;

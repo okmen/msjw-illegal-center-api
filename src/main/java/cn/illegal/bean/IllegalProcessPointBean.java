@@ -1,6 +1,13 @@
 package cn.illegal.bean;
 
-public class IllegalProcessPointBean {
+import java.io.Serializable;
+
+public class IllegalProcessPointBean implements Serializable  {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8954176986732282252L;
+
 	private String cldaddress;
 
 	private String cldbmid;

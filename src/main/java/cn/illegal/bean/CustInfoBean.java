@@ -1,6 +1,13 @@
 package cn.illegal.bean;
 
-public class CustInfoBean {
+import java.io.Serializable;
+
+public class CustInfoBean  implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4587311711457174197L;
+
 	private String custName;
 
 	private String certificateNo;

@@ -1,6 +1,13 @@
 package cn.illegal.bean;
 
-public class Sditem {
+import java.io.Serializable;
+
+public class Sditem implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5753218893358801066L;
+
 	private String ccsjd;
 
 	private String cczb_id;
