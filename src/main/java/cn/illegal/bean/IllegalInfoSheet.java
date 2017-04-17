@@ -12,10 +12,11 @@ public class IllegalInfoSheet  implements Serializable{
 	private String carOwner;
 	private String licensePlateNo;
 	private String licensePlateType;
+	private String drivingLicenceNo;
 	private String illegalTime;
-	private String illegalAddress;
+	private String illegalAddr;
 	private String illegalDesc;
-	private Integer punishAmount;
+	private Integer punishAmt;
 	private Integer punishScore;
 	private String dealType;
 	private String illegalUnit;
@@ -57,12 +58,7 @@ public class IllegalInfoSheet  implements Serializable{
 		this.returnMsg = returnMsg;
 	}
 
-	public Integer getPunishAmount() {
-		return punishAmount;
-	}
-	public void setPunishAmount(Integer punishAmount) {
-		this.punishAmount = punishAmount;
-	}
+
 	public Integer getPunishScore() {
 		return punishScore;
 	}
@@ -101,12 +97,7 @@ public class IllegalInfoSheet  implements Serializable{
 	public void setIllegalTime(String illegalTime) {
 		this.illegalTime = illegalTime;
 	}
-	public String getIllegalAddress() {
-		return illegalAddress;
-	}
-	public void setIllegalAddress(String illegalAddress) {
-		this.illegalAddress = illegalAddress;
-	}
+
 	public String getIllegalDesc() {
 		return illegalDesc;
 	}
@@ -125,6 +116,24 @@ public class IllegalInfoSheet  implements Serializable{
 	}
 	public void setIllegalUnit(String illegalUnit) {
 		this.illegalUnit = illegalUnit;
+	}
+	public String getDrivingLicenceNo() {
+		return drivingLicenceNo;
+	}
+	public void setDrivingLicenceNo(String drivingLicenceNo) {
+		this.drivingLicenceNo = drivingLicenceNo;
+	}
+	public String getIllegalAddr() {
+		return illegalAddr;
+	}
+	public void setIllegalAddr(String illegalAddr) {
+		this.illegalAddr = illegalAddr;
+	}
+	public Integer getPunishAmt() {
+		return punishAmt;
+	}
+	public void setPunishAmt(Integer punishAmt) {
+		this.punishAmt = punishAmt;
 	}
 
 }

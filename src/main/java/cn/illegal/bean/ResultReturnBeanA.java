@@ -6,7 +6,7 @@ import java.util.List;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class ResultReturnBean implements Serializable {
+public class ResultReturnBeanA implements Serializable {
 	/**
 	 * 
 	 */
@@ -28,7 +28,7 @@ public class ResultReturnBean implements Serializable {
 
 	private String respMsg;
 
-	private JSONArray data;
+	private JSONObject data;
 
 	public void setPartnerCode(String partnerCode){
 	this.partnerCode = partnerCode;
@@ -78,10 +78,10 @@ public class ResultReturnBean implements Serializable {
 	public String getRespMsg(){
 	return this.respMsg;
 	}
-	public void setData(JSONArray data){
+	public void setData(JSONObject data){
 	this.data = data;
 	}
-	public JSONArray getData(){
+	public JSONObject getData(){
 	return this.data;
 	}
 }

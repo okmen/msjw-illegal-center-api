@@ -2,24 +2,23 @@ package cn.illegal.bean;
 
 import java.io.Serializable;
 
-public class IllegalInfoBean  implements Serializable{
+public class IllegalInfoClaim  implements Serializable{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 544850982022211115L;
-	private String billNo;
-	private String carOwner;
+	private String illegalNo;
+	private String drivingLicenceNo;
+	private String agency;
+	private String dealType;
 	private String licensePlateNo;
 	private String licensePlateType;
 	private String illegalTime;
-	private String illegalAddress;
+	private String illegalAddr;
 	private String illegalDesc;
 	private Integer punishAmt;
 	private Integer punishScore;
-	private String isNeedClaim;
-	private String illegalUnit;
-	private String imgQueryCode;
-	private String  description;
+
 	
 	
 
@@ -31,18 +30,7 @@ public class IllegalInfoBean  implements Serializable{
 	}
 	
 	
-	public String getBillNo() {
-		return billNo;
-	}
-	public void setBillNo(String billNo) {
-		this.billNo = billNo;
-	}
-	public String getCarOwner() {
-		return carOwner;
-	}
-	public void setCarOwner(String carOwner) {
-		this.carOwner = carOwner;
-	}
+
 	public String getLicensePlateNo() {
 		return licensePlateNo;
 	}
@@ -61,12 +49,7 @@ public class IllegalInfoBean  implements Serializable{
 	public void setIllegalTime(String illegalTime) {
 		this.illegalTime = illegalTime;
 	}
-	public String getIllegalAddress() {
-		return illegalAddress;
-	}
-	public void setIllegalAddress(String illegalAddress) {
-		this.illegalAddress = illegalAddress;
-	}
+
 	public String getIllegalDesc() {
 		return illegalDesc;
 	}
@@ -75,35 +58,41 @@ public class IllegalInfoBean  implements Serializable{
 	}
 
 
-	public String getIllegalUnit() {
-		return illegalUnit;
-	}
-	public void setIllegalUnit(String illegalUnit) {
-		this.illegalUnit = illegalUnit;
-	}
 	public Integer getPunishAmt() {
 		return punishAmt;
 	}
 	public void setPunishAmt(Integer punishAmt) {
 		this.punishAmt = punishAmt;
 	}
-	public String getIsNeedClaim() {
-		return isNeedClaim;
+	public String getIllegalNo() {
+		return illegalNo;
 	}
-	public void setIsNeedClaim(String isNeedClaim) {
-		this.isNeedClaim = isNeedClaim;
+	public void setIllegalNo(String illegalNo) {
+		this.illegalNo = illegalNo;
 	}
-	public String getImgQueryCode() {
-		return imgQueryCode;
+	public String getDrivingLicenceNo() {
+		return drivingLicenceNo;
 	}
-	public void setImgQueryCode(String imgQueryCode) {
-		this.imgQueryCode = imgQueryCode;
+	public void setDrivingLicenceNo(String drivingLicenceNo) {
+		this.drivingLicenceNo = drivingLicenceNo;
 	}
-	public String getDescription() {
-		return description;
+	public String getAgency() {
+		return agency;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+	public void setAgency(String agency) {
+		this.agency = agency;
+	}
+	public String getDealType() {
+		return dealType;
+	}
+	public void setDealType(String dealType) {
+		this.dealType = dealType;
+	}
+	public String getIllegalAddr() {
+		return illegalAddr;
+	}
+	public void setIllegalAddr(String illegalAddr) {
+		this.illegalAddr = illegalAddr;
 	}
 
 }

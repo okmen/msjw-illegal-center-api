@@ -13,6 +13,7 @@ import cn.illegal.bean.AppealInfoBean;
 import cn.illegal.bean.CarInfoBean;
 import cn.illegal.bean.CustInfoBean;
 import cn.illegal.bean.IllegalInfoBean;
+import cn.illegal.bean.IllegalInfoClaim;
 import cn.illegal.bean.IllegalInfoSheet;
 import cn.illegal.bean.IllegalProcessPointBean;
 import cn.illegal.bean.ReservationDay;
@@ -32,13 +33,15 @@ public interface IIllegalService {
 	
 	public List<IllegalInfoBean> queryInfoByDrivingLicenceNo(String drivingLicenceNo,String recordNo);
 	
-	public List<IllegalInfoBean> trafficIllegalClaimBefore(String licensePlateNo, String licensePlateType, String mobilephone);
+	public List<IllegalInfoClaim> trafficIllegalClaimBefore(String licensePlateNo, String licensePlateType, String mobilephone);
 	
 	public IllegalInfoSheet trafficIllegalClaim(String illegalNo);
 	
-	public List<IllegalInfoSheet> toQueryPunishmentPage(String billNo,String  licensePlateNo,String mobilephone);
+	public String toQueryPunishmentPage(String billNo,String  licensePlateNo,String mobilephone);
 	
-	public String toPayPage(String illegalNo);
+	public String toPayPage(String illegalNo,String licensePlateNo, String mobileNo);
+	
+	public int isRegisterUser();
 	
 	public List<IllegalProcessPointBean> getIllegalProcessingPoint();
 	
@@ -53,4 +56,6 @@ public interface IIllegalService {
 	public String trafficIllegalAppeal(AppealInfoBean info,String identityCard,String userCode,String sourceType);
 	
 	public AppealInfoBack trafficIllegalAppealFeedback(String identityCard,String sourceType);
+	
+	public String  trafficIllegalClaimReg(CustInfoBean custInfo, CarInfoBean carInfo);
 }
