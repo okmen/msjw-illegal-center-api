@@ -12,7 +12,7 @@ public class IllegalInfoBean  implements Serializable{
 	private String licensePlateNo;
 	private String licensePlateType;
 	private String illegalTime;
-	private String illegalAddress;
+	private String illegalAddr;
 	private String illegalDesc;
 	private Integer punishAmt;
 	private Integer punishScore;
@@ -61,12 +61,7 @@ public class IllegalInfoBean  implements Serializable{
 	public void setIllegalTime(String illegalTime) {
 		this.illegalTime = illegalTime;
 	}
-	public String getIllegalAddress() {
-		return illegalAddress;
-	}
-	public void setIllegalAddress(String illegalAddress) {
-		this.illegalAddress = illegalAddress;
-	}
+
 	public String getIllegalDesc() {
 		return illegalDesc;
 	}
@@ -104,6 +99,12 @@ public class IllegalInfoBean  implements Serializable{
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public String getIllegalAddr() {
+		return illegalAddr;
+	}
+	public void setIllegalAddr(String illegalAddr) {
+		this.illegalAddr = illegalAddr;
 	}
 
 }
