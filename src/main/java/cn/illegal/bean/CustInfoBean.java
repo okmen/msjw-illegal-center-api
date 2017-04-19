@@ -17,6 +17,8 @@ public class CustInfoBean  implements Serializable {
 	private String mobileNo;
 	
 	private String drivingLicenceNo;
+	
+	public CustInfoBean(){}
 
 	public CustInfoBean(String custName, String certificateNo, String certificateType, String mobileNo,
 			String drivingLicenceNo) {

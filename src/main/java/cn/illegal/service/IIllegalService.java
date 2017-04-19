@@ -13,6 +13,7 @@ import cn.illegal.bean.IllegalProcessPointBean;
 import cn.illegal.bean.ReservationDay;
 
 import cn.illegal.bean.SubcribeBean;
+import cn.sdk.bean.BaseBean;
 
 /**
  * @author lutaijun
@@ -36,7 +37,7 @@ public interface IIllegalService {
 	
 	public String toPayPage(String illegalNo,String licensePlateNo, String mobileNo);
 	
-	public int isRegisterUser();
+	public String isRegisterUser();
 	
 	public List<IllegalProcessPointBean> getIllegalProcessingPoint();
 	
@@ -52,5 +53,5 @@ public interface IIllegalService {
 	
 	public AppealInfoBack trafficIllegalAppealFeedback(String identityCard,String sourceType);
 	
-	public String  trafficIllegalClaimReg(CustInfoBean custInfo, CarInfoBean carInfo);
+	public BaseBean  trafficIllegalClaimReg(CustInfoBean custInfo, CarInfoBean carInfo);
 }

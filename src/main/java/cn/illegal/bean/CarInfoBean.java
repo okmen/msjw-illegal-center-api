@@ -14,6 +14,8 @@ public class CarInfoBean implements Serializable {
 
 	private String vehicleIdentifyNoLast4;
 
+	public CarInfoBean(){}
+	
 	public CarInfoBean(String licensePlateNo, String licensePlateType, String vehicleIdentifyNoLast4) {
 		super();
 		this.licensePlateNo = licensePlateNo;
