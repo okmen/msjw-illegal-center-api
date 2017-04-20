@@ -41,17 +41,17 @@ public interface IIllegalService {
 	
 	public List<IllegalProcessPointBean> getIllegalProcessingPoint();
 	
-	public String toChangeSubscribe(String snm,String cldbmid,String cczb_id,CustInfoBean custInfo,CarInfoBean carInfo,String sourceType);
+	public BaseBean toChangeSubscribe(String snm,String cldbmid,String cczb_id,CustInfoBean custInfo,CarInfoBean carInfo,String sourceType);
 	
-	public String toCancleSubscribe(String subscribeNo);
+	public BaseBean toCancleSubscribe(String subscribeNo);
 	
 	public List<SubcribeBean> querySubscribe(String licensePlateNo,String  licensePlateType,String mobilephone);
 	
 	public  List<ReservationDay> toGetSubscribeSorts(String cldbmid);
 	
-	public String trafficIllegalAppeal(AppealInfoBean info,String identityCard,String userCode,String sourceType);
+	public BaseBean trafficIllegalAppeal(AppealInfoBean info,String identityCard,String userCode,String sourceType);
 	
-	public AppealInfoBack trafficIllegalAppealFeedback(String identityCard,String sourceType);
+	public List<AppealInfoBack> trafficIllegalAppealFeedback(String identityCard,String sourceType);
 	
 	public BaseBean  trafficIllegalClaimReg(CustInfoBean custInfo, CarInfoBean carInfo);
 }
