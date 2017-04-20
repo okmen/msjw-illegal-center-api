@@ -1,6 +1,7 @@
 package cn.illegal.service;
 
 import java.util.List;
+import java.util.Map;
 
 import cn.illegal.bean.AppealInfoBack;
 import cn.illegal.bean.AppealInfoBean;
@@ -47,7 +48,7 @@ public interface IIllegalService {
 	
 	public List<SubcribeBean> querySubscribe(String licensePlateNo,String  licensePlateType,String mobilephone);
 	
-	public  List<ReservationDay> toGetSubscribeSorts(String cldbmid);
+	public Map toGetSubscribeSorts(String cldbmid);
 	
 	public BaseBean trafficIllegalAppeal(AppealInfoBean info,String identityCard,String userCode,String sourceType);
 	
