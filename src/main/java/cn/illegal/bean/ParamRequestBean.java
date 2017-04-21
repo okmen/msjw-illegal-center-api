@@ -77,4 +77,11 @@ public class ParamRequestBean implements Serializable  {
 		return this.data;
 		}
 
+		@Override
+		public String toString() {
+			return "ParamRequestBean [partnerCode=" + partnerCode + ", partnerUserId=" + partnerUserId + ", serialNo="
+					+ serialNo + ", timeStamp=" + timeStamp + ", macAlg=" + macAlg + ", mac=" + mac + ", data=" + data
+					+ "]";
+		}
+
 }
