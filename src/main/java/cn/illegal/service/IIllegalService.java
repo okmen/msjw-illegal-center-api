@@ -46,7 +46,7 @@ public interface IIllegalService {
 	
 	public BaseBean toCancleSubscribe(String subscribeNo);
 	
-	public List<SubcribeBean> querySubscribe(String licensePlateNo,String  licensePlateType,String mobilephone);
+	public List<SubcribeBean> querySubscribe(String licensePlateNo,int  licensePlateType,String mobilephone);
 	
 	public Map toGetSubscribeSorts(String cldbmid);
 	
