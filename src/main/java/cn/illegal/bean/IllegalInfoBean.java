@@ -80,7 +80,7 @@ public class IllegalInfoBean  implements Serializable{
 		return punishAmt;
 	}
 	public void setPunishAmt(Integer punishAmt) {
-		this.punishAmt = punishAmt;
+		this.punishAmt = punishAmt/100;
 	}
 	public String getIsNeedClaim() {
 		return isNeedClaim;

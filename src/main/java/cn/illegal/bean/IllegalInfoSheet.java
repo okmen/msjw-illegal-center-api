@@ -133,7 +133,7 @@ public class IllegalInfoSheet  implements Serializable{
 		return punishAmt;
 	}
 	public void setPunishAmt(Integer punishAmt) {
-		this.punishAmt = punishAmt;
+		this.punishAmt = punishAmt/100;
 	}
 
 }
