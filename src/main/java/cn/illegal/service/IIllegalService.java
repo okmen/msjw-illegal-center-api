@@ -30,7 +30,7 @@ public interface IIllegalService {
 	
 	public List<IllegalInfoBean> queryInfoByDrivingLicenceNo(String drivingLicenceNo,String recordNo);
 	
-	public List<IllegalInfoClaim> trafficIllegalClaimBefore(String licensePlateNo, String licensePlateType, String mobilephone);
+	public BaseBean trafficIllegalClaimBefore(String licensePlateNo, String licensePlateType, String mobilephone);
 	
 	public IllegalInfoSheet trafficIllegalClaim(String illegalNo);
 	
