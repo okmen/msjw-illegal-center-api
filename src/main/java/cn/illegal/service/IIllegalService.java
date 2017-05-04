@@ -8,10 +8,8 @@ import cn.illegal.bean.AppealInfoBean;
 import cn.illegal.bean.CarInfoBean;
 import cn.illegal.bean.CustInfoBean;
 import cn.illegal.bean.IllegalInfoBean;
-import cn.illegal.bean.IllegalInfoClaim;
 import cn.illegal.bean.IllegalInfoSheet;
 import cn.illegal.bean.IllegalProcessPointBean;
-import cn.illegal.bean.ReservationDay;
 
 import cn.illegal.bean.SubcribeBean;
 import cn.sdk.bean.BaseBean;
@@ -34,25 +32,25 @@ public interface IIllegalService {
 	
 	public IllegalInfoSheet trafficIllegalClaim(String illegalNo);
 	
-	public String toQueryPunishmentPage(String billNo,String  licensePlateNo,String mobilephone);
+	public String toQueryPunishmentPage(String billNo,String  licensePlateNo,String mobilephone) throws Exception;
 	
-	public String toPayPage(String illegalNo,String licensePlateNo, String mobileNo);
+	public String toPayPage(String illegalNo,String licensePlateNo, String mobileNo) throws Exception;
 	
 	public String isRegisterUser();
 	
-	public List<IllegalProcessPointBean> getIllegalProcessingPoint();
+	public List<IllegalProcessPointBean> getIllegalProcessingPoint() throws Exception;
 	
-	public BaseBean toChangeSubscribe(String snm,String cldbmid,String cczb_id,CustInfoBean custInfo,CarInfoBean carInfo,String sourceType);
+	public BaseBean toChangeSubscribe(String snm,String cldbmid,String cczb_id,CustInfoBean custInfo,CarInfoBean carInfo,String sourceType) throws Exception;
 	
-	public BaseBean toCancleSubscribe(String subscribeNo);
+	public BaseBean toCancleSubscribe(String subscribeNo) throws Exception;
 	
-	public List<SubcribeBean> querySubscribe(String licensePlateNo,int  licensePlateType,String mobilephone);
+	public List<SubcribeBean> querySubscribe(String licensePlateNo,int  licensePlateType,String mobilephone) throws Exception;
 	
-	public Map toGetSubscribeSorts(String cldbmid);
+	public Map toGetSubscribeSorts(String cldbmid) throws Exception;
 	
-	public BaseBean trafficIllegalAppeal(AppealInfoBean info,String identityCard,String userCode,String sourceType);
+	public BaseBean trafficIllegalAppeal(AppealInfoBean info,String identityCard,String userCode,String sourceType) throws Exception;
 	
-	public List<AppealInfoBack> trafficIllegalAppealFeedback(String identityCard,String sourceType);
+	public List<AppealInfoBack> trafficIllegalAppealFeedback(String identityCard,String sourceType) throws Exception;
 	
 	public BaseBean  trafficIllegalClaimReg(CustInfoBean custInfo, CarInfoBean carInfo);
 }
