@@ -34,6 +34,8 @@ public interface IIllegalService {
 	
 	public String toQueryPunishmentPage(String billNo,String  licensePlateNo,String mobilephone) throws Exception;
 	
+	public String qrCodeToQueryPage(String userName, String traffData, String mobileNo,String openId)throws Exception;
+	
 	public String toPayPage(String illegalNo,String licensePlateNo, String mobileNo) throws Exception;
 	
 	public String isRegisterUser();
