@@ -36,6 +36,8 @@ public interface IIllegalService {
 	
 	public String qrCodeToQueryPage(String userName, String traffData, String mobileNo,String openId)throws Exception;
 	
+	public String callback(String traffData) throws Exception;
+	
 	public String toPayPage(String illegalNo,String licensePlateNo, String mobileNo) throws Exception;
 	
 	public String isRegisterUser();
