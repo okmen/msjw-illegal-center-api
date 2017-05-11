@@ -22,15 +22,15 @@ public interface IIllegalService {
 	
 	public String getMsg(String msg);
 	
-	public String custRegInfoReceive(CustInfoBean custInfo ,List<CarInfoBean> carInfo);
+	public String custRegInfoReceive(CustInfoBean custInfo ,List<CarInfoBean> carInfo)throws Exception;
 	
-	public List<IllegalInfoBean> queryInfoByLicensePlateNo(String licensePlateNo,String licensePlateType,String vehicleIdentifyNoLast4);
+	public List<IllegalInfoBean> queryInfoByLicensePlateNo(String licensePlateNo,String licensePlateType,String vehicleIdentifyNoLast4)throws Exception;
 	
-	public List<IllegalInfoBean> queryInfoByDrivingLicenceNo(String drivingLicenceNo,String recordNo);
+	public List<IllegalInfoBean> queryInfoByDrivingLicenceNo(String drivingLicenceNo,String recordNo)throws Exception;
 	
-	public BaseBean trafficIllegalClaimBefore(String licensePlateNo, String licensePlateType, String mobilephone);
+	public BaseBean trafficIllegalClaimBefore(String licensePlateNo, String licensePlateType, String mobilephone)throws Exception;
 	
-	public IllegalInfoSheet trafficIllegalClaim(String illegalNo);
+	public IllegalInfoSheet trafficIllegalClaim(String illegalNo)throws Exception;
 	
 	public String toQueryPunishmentPage(String billNo,String  licensePlateNo,String mobilephone) throws Exception;
 	
@@ -40,7 +40,7 @@ public interface IIllegalService {
 	
 	public String toPayPage(String illegalNo,String licensePlateNo, String mobileNo) throws Exception;
 	
-	public String isRegisterUser();
+	public String isRegisterUser()throws Exception;
 	
 	public List<IllegalProcessPointBean> getIllegalProcessingPoint() throws Exception;
 	
@@ -56,5 +56,5 @@ public interface IIllegalService {
 	
 	public List<AppealInfoBack> trafficIllegalAppealFeedback(String identityCard,String sourceType) throws Exception;
 	
-	public BaseBean  trafficIllegalClaimReg(CustInfoBean custInfo, CarInfoBean carInfo);
+	public BaseBean  trafficIllegalClaimReg(CustInfoBean custInfo, CarInfoBean carInfo)throws Exception;
 }
