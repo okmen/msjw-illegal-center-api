@@ -32,7 +32,7 @@ public interface IIllegalService {
 	
 	public IllegalInfoSheet trafficIllegalClaim(String illegalNo)throws Exception;
 	
-	public String toQueryPunishmentPage(String billNo,String  licensePlateNo,String mobilephone) throws Exception;
+	public String toQueryPunishmentPage(String billNo,String  licensePlateNo,String mobilephone,String openId) throws Exception;
 	
 	public String qrCodeToQueryPage(String userName, String traffData, String mobileNo,String openId)throws Exception;
 	
