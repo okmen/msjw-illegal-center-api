@@ -22,15 +22,15 @@ public interface IIllegalService {
 	
 	public String getMsg(String msg);
 	
-	public String custRegInfoReceive(CustInfoBean custInfo ,List<CarInfoBean> carInfo)throws Exception;
+	public String custRegInfoReceive(CustInfoBean custInfo ,List<CarInfoBean> carInfo,String openId)throws Exception;
 	
-	public List<IllegalInfoBean> queryInfoByLicensePlateNo(String licensePlateNo,String licensePlateType,String vehicleIdentifyNoLast4)throws Exception;
+	public List<IllegalInfoBean> queryInfoByLicensePlateNo(String licensePlateNo,String licensePlateType,String vehicleIdentifyNoLast4,String openId)throws Exception;
 	
-	public List<IllegalInfoBean> queryInfoByDrivingLicenceNo(String drivingLicenceNo,String recordNo)throws Exception;
+	public List<IllegalInfoBean> queryInfoByDrivingLicenceNo(String drivingLicenceNo,String recordNo,String openId)throws Exception;
 	
-	public BaseBean trafficIllegalClaimBefore(String licensePlateNo, String licensePlateType, String mobilephone)throws Exception;
+	public BaseBean trafficIllegalClaimBefore(String licensePlateNo, String licensePlateType, String mobilephone,String openId)throws Exception;
 	
-	public IllegalInfoSheet trafficIllegalClaim(String illegalNo)throws Exception;
+	public IllegalInfoSheet trafficIllegalClaim(String illegalNo,String openId)throws Exception;
 	
 	public String toQueryPunishmentPage(String billNo,String  licensePlateNo,String mobilephone,String openId) throws Exception;
 	
@@ -38,9 +38,9 @@ public interface IIllegalService {
 	
 	public String callback(String traffData) throws Exception;
 	
-	public String toPayPage(String illegalNo,String licensePlateNo, String mobileNo) throws Exception;
+	public String toPayPage(String illegalNo,String licensePlateNo, String mobileNo,String openId) throws Exception;
 	
-	public String isRegisterUser()throws Exception;
+	public String isRegisterUser(String openId)throws Exception;
 	
 	public List<IllegalProcessPointBean> getIllegalProcessingPoint() throws Exception;
 	
@@ -56,5 +56,5 @@ public interface IIllegalService {
 	
 	public List<AppealInfoBack> trafficIllegalAppealFeedback(String identityCard,String sourceType) throws Exception;
 	
-	public BaseBean  trafficIllegalClaimReg(CustInfoBean custInfo, CarInfoBean carInfo)throws Exception;
+	public BaseBean  trafficIllegalClaimReg(CustInfoBean custInfo, CarInfoBean carInfo,String openId)throws Exception;
 }
