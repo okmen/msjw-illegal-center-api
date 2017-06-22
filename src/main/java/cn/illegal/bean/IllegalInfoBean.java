@@ -1,6 +1,7 @@
 package cn.illegal.bean;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class IllegalInfoBean  implements Serializable{
 	/**
@@ -20,6 +21,7 @@ public class IllegalInfoBean  implements Serializable{
 	private String illegalUnit;
 	private String imgQueryCode;
 	private String  description;
+	private List<String> illegalImgs;
 	
 	
 
@@ -106,5 +108,11 @@ public class IllegalInfoBean  implements Serializable{
 	public void setIllegalAddr(String illegalAddr) {
 		this.illegalAddr = illegalAddr;
 	}
-
+	public List<String> getIllegalImgs() {
+		return illegalImgs;
+	}
+	public void setIllegalImgs(List<String> illegalImgs) {
+		this.illegalImgs = illegalImgs;
+	}
+	
 }
