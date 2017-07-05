@@ -64,5 +64,5 @@ public interface IIllegalService {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<String> illegalPictureQuery(String imgQueryCode)throws Exception ;
+	public List<String> illegalPictureQuery(String imgQueryCode,String sourceOfCertification)throws Exception ;
 }
