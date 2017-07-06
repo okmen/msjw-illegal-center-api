@@ -67,7 +67,6 @@ public interface IIllegalService {
 
 	public List<String> illegalPictureQuery(String imgQueryCode,String sourceOfCertification)throws Exception ;
 
-	public List<String> illegalPictureQuery(String imgQueryCode)throws Exception ;
 	/**
 	 * 车辆临时停车违停申报
 	 * @param reportingNoParkin
