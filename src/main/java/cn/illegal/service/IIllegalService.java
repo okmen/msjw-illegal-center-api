@@ -10,7 +10,7 @@ import cn.illegal.bean.CustInfoBean;
 import cn.illegal.bean.IllegalInfoBean;
 import cn.illegal.bean.IllegalInfoSheet;
 import cn.illegal.bean.IllegalProcessPointBean;
-
+import cn.illegal.bean.ReportingNoParking;
 import cn.illegal.bean.SubcribeBean;
 import cn.sdk.bean.BaseBean;
 
@@ -64,5 +64,35 @@ public interface IIllegalService {
 	 * @return
 	 * @throws Exception
 	 */
+
 	public List<String> illegalPictureQuery(String imgQueryCode,String sourceOfCertification)throws Exception ;
+
+	public List<String> illegalPictureQuery(String imgQueryCode)throws Exception ;
+	/**
+	 * 车辆临时停车违停申报
+	 * @param reportingNoParkin
+	 * @return
+	 * @throws Exception
+	 */
+	public Map<String, String> reportingNoParking(ReportingNoParking reportingNoParking)throws Exception;
+	/**
+	 * 单宗违停申报查询
+	 * @param orderNumber
+	 * @param numberPlateNumber
+	 * @param plateType
+	 * @param sourceOfCertification
+	 * @return
+	 * @throws Exception
+	 */
+	public Map<String, Object> singleQueryOfReportingNoParking(String orderNumber ,String numberPlateNumber ,String plateType ,String sourceOfCertification) throws Exception;
+	/**
+	 * 违停申报列表查询
+	 * @param numberPlateNumber
+	 * @param plateType
+	 * @param sourceOfCertification
+	 * @return
+	 * @throws Exception
+	 */
+	public Map<String, Object> recordOfReportingNoParking(String numberPlateNumber ,String plateType ,String sourceOfCertification) throws Exception;
+
 }
