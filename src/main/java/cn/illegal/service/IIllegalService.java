@@ -7,6 +7,7 @@ import cn.illegal.bean.AppealInfoBack;
 import cn.illegal.bean.AppealInfoBean;
 import cn.illegal.bean.CarInfoBean;
 import cn.illegal.bean.CustInfoBean;
+import cn.illegal.bean.ElectronicReceiptBean;
 import cn.illegal.bean.IllegalInfoBean;
 import cn.illegal.bean.IllegalInfoSheet;
 import cn.illegal.bean.IllegalProcessPointBean;
@@ -67,6 +68,7 @@ public interface IIllegalService {
 
 	public List<String> illegalPictureQuery(String imgQueryCode,String sourceOfCertification)throws Exception ;
 
+
 	/**
 	 * 车辆临时停车违停申报
 	 * @param reportingNoParkin
@@ -93,5 +95,17 @@ public interface IIllegalService {
 	 * @throws Exception
 	 */
 	public Map<String, Object> recordOfReportingNoParking(String numberPlateNumber ,String plateType ,String sourceOfCertification) throws Exception;
+
+
+	
+	/**
+	 * 电子回单查询
+	 * @param billNo
+	 * @param licensePlateNo
+	 * @param drivingLicenceNo
+	 * @param openId
+	 * @return
+	 */
+	public List<ElectronicReceiptBean> toQueryElectronicReceiptPage(String billNo, String licensePlateNo, String drivingLicenceNo,String openId)throws Exception ;
 
 }
