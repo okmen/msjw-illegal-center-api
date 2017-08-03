@@ -40,7 +40,7 @@ public interface IIllegalService {
 	
 	public String callback(String traffData) throws Exception;
 	
-	public String toPayPage(String illegalNo,String licensePlateNo, String mobileNo,String openId) throws Exception;
+	public String toPayPage(String billNo,String licensePlateNo, String mobileNo,String openId) throws Exception;
 	
 	public String isRegisterUser(String openId)throws Exception;
 	
