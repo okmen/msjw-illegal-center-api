@@ -19,6 +19,14 @@ public class ReportingNoParking implements Serializable{
 	private String scenePhoto3;//后五米无车场景
 	private String stopNoticePhoto;//停车告知单拍摄照片
 	private String sourceOfCertification;//申请来源
+	private String stopNoticeNumber;//违停告知书号
+	
+	public String getStopNoticeNumber() {
+		return stopNoticeNumber;
+	}
+	public void setStopNoticeNumber(String stopNoticeNumber) {
+		this.stopNoticeNumber = stopNoticeNumber;
+	}
 	public String getNumberPlateNumber() {
 		return numberPlateNumber;
 	}
@@ -91,8 +99,9 @@ public class ReportingNoParking implements Serializable{
 				+ IDcard + ", parkingSpot=" + parkingSpot + ", parkingReason=" + parkingReason + ", scenePhoto="
 				+ scenePhoto + ", scenePhoto1=" + scenePhoto1 + ", scenePhoto2=" + scenePhoto2 + ", scenePhoto3="
 				+ scenePhoto3 + ", stopNoticePhoto=" + stopNoticePhoto + ", sourceOfCertification="
-				+ sourceOfCertification + "]";
+				+ sourceOfCertification + ", stopNoticeNumber=" + stopNoticeNumber + "]";
 	}
+	
 	
 
 }
