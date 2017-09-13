@@ -25,7 +25,7 @@ public interface IIllegalService {
 	
 	public String custRegInfoReceive(CustInfoBean custInfo ,List<CarInfoBean> carInfo,String openId)throws Exception;
 	
-	public BaseBean queryInfoByLicensePlateNo(String licensePlateNo,String licensePlateType,String vehicleIdentifyNoLast4,String openId)throws Exception;
+	public BaseBean queryInfoByLicensePlateNo(String licensePlateNo,String licensePlateType,String vehicleIdentifyNoLast4,String openId,String sourceOfCertification)throws Exception;
 	public BaseBean queryInfoByLicensePlateNo1(String licensePlateNo,String licensePlateType,String vehicleIdentifyNoLast4,String openId)throws Exception;
 	
 	public List<IllegalInfoBean> queryInfoByDrivingLicenceNo(String drivingLicenceNo,String recordNo,String openId)throws Exception;
