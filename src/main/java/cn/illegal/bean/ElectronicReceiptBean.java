@@ -21,6 +21,9 @@ public class ElectronicReceiptBean implements Serializable {
 	private String paymentor;//缴款单位/人
 	private String sdb;//银行流水号
 	
+	private Integer delayAmt;//滞纳金
+	private String illegalDesc;//罚款原因
+	
 	
 	public String getBillNo() {
 		return billNo;
@@ -81,5 +84,17 @@ public class ElectronicReceiptBean implements Serializable {
 
 	public String toString(){
 		return ReflectionToStringBuilder.toString(this); 
+	}
+	public Integer getDelayAmt() {
+		return delayAmt;
+	}
+	public void setDelayAmt(Integer delayAmt) {
+		this.delayAmt = delayAmt/100;
+	}
+	public String getIllegalDesc() {
+		return illegalDesc;
+	}
+	public void setIllegalDesc(String illegalDesc) {
+		this.illegalDesc = illegalDesc;
 	}
 }
