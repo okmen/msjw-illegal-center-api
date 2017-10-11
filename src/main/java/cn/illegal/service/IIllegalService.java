@@ -23,26 +23,26 @@ public interface IIllegalService {
 	
 	public String getMsg(String msg);
 	
-	public String custRegInfoReceive(CustInfoBean custInfo ,List<CarInfoBean> carInfo,String openId)throws Exception;
+	public String custRegInfoReceive(CustInfoBean custInfo ,List<CarInfoBean> carInfo,String openId,String sourceOfCertification)throws Exception;
 	
-	public BaseBean queryInfoByLicensePlateNo(String licensePlateNo,String licensePlateType,String vehicleIdentifyNoLast4,String openId)throws Exception;
-	public BaseBean queryInfoByLicensePlateNo1(String licensePlateNo,String licensePlateType,String vehicleIdentifyNoLast4,String openId)throws Exception;
+	public BaseBean queryInfoByLicensePlateNo(String licensePlateNo,String licensePlateType,String vehicleIdentifyNoLast4,String openId,String sourceOfCertification)throws Exception;
+	public BaseBean queryInfoByLicensePlateNo1(String licensePlateNo,String licensePlateType,String vehicleIdentifyNoLast4,String openId,String sourceOfCertification)throws Exception;
 	
-	public List<IllegalInfoBean> queryInfoByDrivingLicenceNo(String drivingLicenceNo,String recordNo,String openId)throws Exception;
+	public List<IllegalInfoBean> queryInfoByDrivingLicenceNo(String drivingLicenceNo,String recordNo,String openId,String sourceOfCertification)throws Exception;
 	
-	public BaseBean trafficIllegalClaimBefore(String licensePlateNo, String licensePlateType, String mobilephone,String openId)throws Exception;
+	public BaseBean trafficIllegalClaimBefore(String licensePlateNo, String licensePlateType, String mobilephone,String openId,String sourceOfCertification)throws Exception;
 	
-	public IllegalInfoSheet trafficIllegalClaim(String illegalNo,String openId)throws Exception;
+	public IllegalInfoSheet trafficIllegalClaim(String illegalNo,String openId,String sourceOfCertification)throws Exception;
 	
-	public String toQueryPunishmentPage(String billNo,String  licensePlateNo,String mobilephone,String openId) throws Exception;
+	public String toQueryPunishmentPage(String billNo,String  licensePlateNo,String mobilephone,String openId,String sourceOfCertification) throws Exception;
 	
-	public String qrCodeToQueryPage(String userName, String traffData, String mobileNo,String openId)throws Exception;
+	public String qrCodeToQueryPage(String userName, String traffData, String mobileNo,String openId,String sourceOfCertification)throws Exception;
 	
 	public String callback(String traffData) throws Exception;
 	
-	public String toPayPage(String billNo,String licensePlateNo, String mobileNo,String openId) throws Exception;
+	public String toPayPage(String billNo,String licensePlateNo, String mobileNo,String openId,String sourceOfCertification) throws Exception;
 	
-	public String isRegisterUser(String openId)throws Exception;
+	public String isRegisterUser(String openId,String sourceOfCertification)throws Exception;
 	
 	public List<IllegalProcessPointBean> getIllegalProcessingPoint() throws Exception;
 	
@@ -58,7 +58,7 @@ public interface IIllegalService {
 	
 	public List<AppealInfoBack> trafficIllegalAppealFeedback(String identityCard,String sourceType) throws Exception;
 	
-	public BaseBean  trafficIllegalClaimReg(CustInfoBean custInfo, CarInfoBean carInfo,String openId)throws Exception;
+	public BaseBean  trafficIllegalClaimReg(CustInfoBean custInfo, CarInfoBean carInfo,String openId,String sourceOfCertification)throws Exception;
 	/**
 	 * 违法图片查询
 	 * @param imgQueryCode
@@ -106,6 +106,14 @@ public interface IIllegalService {
 	 * @param openId
 	 * @return
 	 */
-	public BaseBean toQueryElectronicReceiptPage(String billNo, String licensePlateNo, String idNo)throws Exception ;
+	public BaseBean toQueryElectronicReceiptPage(String billNo, String licensePlateNo, String idNo,String sourceOfCertification)throws Exception ;
 
+	
+	/**
+	 * 查询电子印章
+	 * @throws Exception 
+	 * @throws Exception 
+	 * @param orderId  银行流水号
+	 */
+	public String szTrafficPoliceElecBillQry(String orderId) throws Exception;
 }
