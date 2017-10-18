@@ -116,4 +116,7 @@ public interface IIllegalService {
 	 * @param orderId  银行流水号
 	 */
 	public String szTrafficPoliceElecBillQry(String orderId) throws Exception;
+	
+	
+	public String testDemo(String timeStamp,String key,String data) throws Exception;
 }
