@@ -44,19 +44,19 @@ public interface IIllegalService {
 	
 	public String isRegisterUser(String openId,String sourceOfCertification)throws Exception;
 	
-	public List<IllegalProcessPointBean> getIllegalProcessingPoint() throws Exception;
+	public List<IllegalProcessPointBean> getIllegalProcessingPoint(String sourceOfCertification) throws Exception;
 	
-	public BaseBean toChangeSubscribe(String snm,String cldbmid,String cczb_id,CustInfoBean custInfo,CarInfoBean carInfo,String sourceType) throws Exception;
+	public BaseBean toChangeSubscribe(String snm,String cldbmid,String cczb_id,CustInfoBean custInfo,CarInfoBean carInfo,String sourceOfCertification) throws Exception;
 	
-	public BaseBean toCancleSubscribe(String subscribeNo) throws Exception;
+	public BaseBean toCancleSubscribe(String subscribeNo,String sourceOfCertification) throws Exception;
 	
-	public List<SubcribeBean> querySubscribe(String licensePlateNo,int  licensePlateType,String mobilephone) throws Exception;
+	public List<SubcribeBean> querySubscribe(String licensePlateNo,int  licensePlateType,String mobilephone,String sourceOfCertification) throws Exception;
 	
-	public Map toGetSubscribeSorts(String cldbmid) throws Exception;
+	public Map toGetSubscribeSorts(String cldbmid,String sourceOfCertification) throws Exception;
 	
-	public BaseBean trafficIllegalAppeal(AppealInfoBean info,String identityCard,String userCode,String sourceType) throws Exception;
+	public BaseBean trafficIllegalAppeal(AppealInfoBean info,String identityCard,String userCode,String sourceOfCertification) throws Exception;
 	
-	public List<AppealInfoBack> trafficIllegalAppealFeedback(String identityCard,String sourceType) throws Exception;
+	public List<AppealInfoBack> trafficIllegalAppealFeedback(String identityCard,String sourceOfCertification) throws Exception;
 	
 	public BaseBean  trafficIllegalClaimReg(CustInfoBean custInfo, CarInfoBean carInfo,String openId,String sourceOfCertification)throws Exception;
 	/**
@@ -118,5 +118,4 @@ public interface IIllegalService {
 	public String szTrafficPoliceElecBillQry(String orderId) throws Exception;
 	
 	
-	public String testDemo(String timeStamp,String key,String data) throws Exception;
 }
