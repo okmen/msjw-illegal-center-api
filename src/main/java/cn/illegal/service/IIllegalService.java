@@ -116,6 +116,23 @@ public interface IIllegalService {
 	 * @param orderId  银行流水号
 	 */
 	public String szTrafficPoliceElecBillQry(String orderId) throws Exception;
-	
+	/**
+	 * 申诉结果评价
+	 * @param businessType
+	 * @param serialNumber
+	 * @param stars
+	 * @param sourceOfCertification
+	 * @return
+	 * @throws Exception
+	 */
+	public BaseBean evaluateResult(String businessType,String serialNumber,String stars,String sourceOfCertification) throws Exception;
+	/**
+	 * 申诉评价结果查询
+	 * @param serialNumber
+	 * @param sourceOfCertification
+	 * @return
+	 * @throws Exception
+	 */
+	public BaseBean queryEvaluateResult(String serialNumber,String sourceOfCertification) throws Exception;
 	
 }
