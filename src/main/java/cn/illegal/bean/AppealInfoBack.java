@@ -37,7 +37,33 @@ public class AppealInfoBack implements Serializable  {
 	private String WFSJ;
 
 	private String ZFDE;
+	
+	private String CLZT;
+	
+	private String CLYJMS;
+	
+	private String CLSJ;
+	
+	
 
+	public String getCLZT() {
+		return CLZT;
+	}
+	public void setCLZT(String cLZT) {
+		CLZT = cLZT;
+	}
+	public String getCLYJMS() {
+		return CLYJMS;
+	}
+	public void setCLYJMS(String cLYJMS) {
+		CLYJMS = cLYJMS;
+	}
+	public String getCLSJ() {
+		return CLSJ;
+	}
+	public void setCLSJ(String cLSJ) {
+		CLSJ = cLSJ;
+	}
 	public void setID(String ID){
 	this.ID = ID;
 	}
