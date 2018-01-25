@@ -106,7 +106,7 @@ public interface IIllegalService {
 	 * @param openId
 	 * @return
 	 */
-	public BaseBean toQueryElectronicReceiptPage(String billNo, String licensePlateNo, String idNo,String sourceOfCertification)throws Exception ;
+	public BaseBean toQueryElectronicReceiptPage(String billNo, String licensePlateNo, String idNo,String sourceOfCertification,String licenseType)throws Exception ;
 
 	
 	/**

@@ -24,7 +24,15 @@ public class ElectronicReceiptBean implements Serializable {
 	private Integer delayAmt;//滞纳金
 	private String illegalDesc;//罚款原因
 	
+	private String licenseType;//车辆类型
 	
+	
+	public String getLicenseType() {
+		return licenseType;
+	}
+	public void setLicenseType(String licenseType) {
+		this.licenseType = licenseType;
+	}
 	public String getBillNo() {
 		return billNo;
 	}
