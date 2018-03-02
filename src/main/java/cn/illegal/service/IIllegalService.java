@@ -134,5 +134,15 @@ public interface IIllegalService {
 	 * @throws Exception
 	 */
 	public BaseBean queryEvaluateResult(String serialNumber,String sourceOfCertification) throws Exception;
+	/**
+	 * 接收消息
+	 * @param src
+	 * @param msgType
+	 * @param eventType
+	 * @param sourceOfCertification
+	 * @return
+	 * @throws Exception
+	 */
+	public BaseBean receiveMessage(String src ,String msgType ,String eventType ,String sourceOfCertification)throws Exception;
 	
 }
