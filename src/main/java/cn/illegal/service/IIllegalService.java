@@ -143,6 +143,6 @@ public interface IIllegalService {
 	 * @return
 	 * @throws Exception
 	 */
-	public BaseBean receiveMessage(String src ,String msgType ,String eventType ,String sourceOfCertification)throws Exception;
+	public BaseBean receiveMessage(String src ,String msgType ,String eventType ,String sourceOfCertification,String giveOpenId)throws Exception;
 	
 }
