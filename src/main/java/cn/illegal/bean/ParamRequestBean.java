@@ -34,6 +34,9 @@ public class ParamRequestBean implements Serializable  {
 			
 		}
 		
+		
+		public ParamRequestBean(){};
+		
 		public void setPartnerCode(String partnerCode){
 		this.partnerCode = partnerCode;
 		}
